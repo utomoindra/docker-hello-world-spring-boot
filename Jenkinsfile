@@ -22,8 +22,8 @@ pipeline {
             }
         }
         stage('Build image') {
-            sh "mv ./target/hello*.jar ./data" 
             steps {
+                sh "mv ./target/hello*.jar ./data"
                 script {
                     dockerImage = docker.build("utomoindra/helloworld:v1")
                 }
