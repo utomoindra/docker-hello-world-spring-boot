@@ -25,7 +25,7 @@ pipeline {
             steps {
                 sh "mv ./target/hello*.jar ./data"
                 script {
-                    dockerImage = docker.build("utomoindra/helloworld:v1")
+                    dockerImage = docker.build("utomoindra/helloworld:v2")
                 }
             }
         }
